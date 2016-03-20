@@ -18,14 +18,42 @@ import java.util.*;
  */
 public class Challenge_002 {
 
+	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) {
+		// Variables needed for calculation
 		Calculator calc = new Calculator();
 		Scanner kb = new Scanner(System.in);
-		int input;
-		
-		//While the input doesn't equal the word stop, keep running the calculator
-		//So is input supposed to be an int or 
-		while()
+		int n1;
+		int n2;
+		int choice;
+
+		do {
+			System.out.println("Enter the two numbers you wish to perform operations upon:");
+			n1 = kb.nextInt();
+			n2 = kb.nextInt();
+
+			System.out.println(
+					"Select the operation you wish to perform. Type and enter a capital \"D\" to stop: \n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division");
+
+			choice = kb.nextInt();
+			switch (choice) {
+			case 1:
+				System.out.println("\nThe answer is " + calc.addNum(n1, n2) + "\n");
+				break;
+			case 2:
+				System.out.println("\nThe answer is " + calc.subtractNum(n1, n2) + "\n");
+				break;
+			case 3:
+				System.out.println("\nThe answer is " + calc.multiplyNum(n1, n2) + "\n");
+				break;
+			case 4:
+				System.out.println("\nThe answer is " + calc.divideNum(n1, n2) + "\n");
+				break;
+			default:
+				System.out.println("\n" + choice + " isn't an operation" + "\n");
+			}
+		} while (n1 != 0 && n2 != 0);
+		kb.close();
 	}
 
 }
