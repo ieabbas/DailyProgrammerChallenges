@@ -12,9 +12,10 @@ package challenge_003;
  * Solution provided by : Ismail A.
  */
 public class Challenge_003 {
-
+	
+	//The main method, designed to keep the cipher enccryption (and maybe decryption) minimalistic
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 
 	}
 
