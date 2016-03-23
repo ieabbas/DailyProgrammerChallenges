@@ -20,6 +20,7 @@ public class Challenge_004 {
 		// Initialize the basics necessary
 		Scanner kb = new Scanner(System.in);
 		int howManyPass;
+		int passLength;
 
 		// Welcome the user
 		System.out.println("Welcome to the most convenient program you've ever ran!\n");
@@ -30,9 +31,19 @@ public class Challenge_004 {
 
 		do {
 			// Ask the user for how many passwords they wish to generate
-			System.out.println("How many passwords would you like to generate?\n(Valid input such that input < 0)");
+			System.out.println("How many passwords would you like to generate?\n(Valid input are integers above 0");
 			howManyPass = kb.nextInt();
 		} while (howManyPass <= 0);
+
+		do {
+			// Ask the user for how long each password should be
+			System.out.println("How many characters should be in each password?\n(Valid input are integers above 0)");
+			passLength = kb.nextInt();
+		} while (passLength < 0);
+
+		// Testing the value associations
+		// System.out.println(howManyPass);
+		// System.out.println(passLength);
 
 		kb.close();
 	}
