@@ -1,5 +1,7 @@
 package challenge_004;
 
+import java.util.Random;
+
 /**
  * This repository contains the challenges posted from the
  * DailyProgrammerChallenges GitHub repository that can be found at
@@ -16,7 +18,6 @@ public class PassGenerator {
 	 * This variable will hold how many passwords the user wishes to generate
 	 * from the object
 	 */
-	@SuppressWarnings("unused")
 	private int howManyPass;
 
 	/*
@@ -24,8 +25,19 @@ public class PassGenerator {
 	 * generate from the object, keeping in mind that characters operate on a
 	 * zero index counter
 	 */
-	@SuppressWarnings("unused")
 	private int passLength;
+
+	/*
+	 * This variable will be the representation of alphabet characters used to
+	 * make up each password
+	 */
+	private final char[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+			'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+	
+	/*
+	 * This variable will randomize the combination of letters to be used in each password
+	 */
+	private Random rand = new Random(26);
 
 	/*
 	 * This is the default constructor for the {@link PassGenerator}. It will
@@ -48,6 +60,13 @@ public class PassGenerator {
 	 * This method will generate the passwords for the user
 	 */
 	public void generate() {
+		// Set the length of the passwords
+		int length = passLength;
+
+		// Set the number of passwords to be created
+		int numOfPass = howManyPass;
+		
+		
 		
 	}
 }
