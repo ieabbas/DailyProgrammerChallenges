@@ -33,11 +33,23 @@ public class PassGenerator {
 	 */
 	private final char[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
 			'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
-	
+
 	/*
-	 * This variable will randomize the combination of letters to be used in each password
+	 * This variable will hold the final set of passwords to be printed after
+	 * generated
+	 */
+	private String[] passwords;
+
+	/*
+	 * This variable will randomize the combination of letters to be used in
+	 * each password
 	 */
 	private Random rand = new Random(26);
+
+	/*
+	 * This variable will append and create the {@link String}s to be printed
+	 * for each password
+	 */
 
 	/*
 	 * This is the default constructor for the {@link PassGenerator}. It will
@@ -54,19 +66,31 @@ public class PassGenerator {
 	public PassGenerator(int howMany, int length) {
 		howManyPass = howMany;
 		passLength = length;
+		passwords = new String[howManyPass];
 	}
 
 	/*
-	 * This method will generate the passwords for the user
+	 * This method will generate the passwords for the user. Each position of
+	 * the {@param passwords} array will hold a password, and the method will
+	 * append a new character to each position until it reaches the length
+	 * specified for each password that the user desires.
 	 */
 	public void generate() {
+		// Keep track of the number of passwords created if you're using an
+		// array of strings to hold each password
+		int count = 0;
+
 		// Set the length of the passwords
 		int length = passLength;
 
 		// Set the number of passwords to be created
 		int numOfPass = howManyPass;
-		
-		
-		
+
+		for (int i = 0; i < numOfPass; i++) {
+			for (int j = 0; j < length; j++) {
+
+			}
+		}
+
 	}
 }
