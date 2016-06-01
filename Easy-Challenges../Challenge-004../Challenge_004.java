@@ -27,11 +27,11 @@ public class Challenge_004 {
 
 		// Give the user some awkward moments to figure out why nothing has
 		// happened yet
-		Thread.sleep(5000);
+		Thread.sleep(2500);
 
 		do {
 			// Ask the user for how many passwords they wish to generate
-			System.out.println("How many passwords would you like to generate?\n(Valid input are integers above 0");
+			System.out.println("How many passwords would you like to generate?\n(Valid input are integers above 0)");
 			howManyPass = kb.nextInt();
 		} while (howManyPass <= 0);
 
@@ -44,6 +44,15 @@ public class Challenge_004 {
 		// Testing the value associations
 		// System.out.println(howManyPass);
 		// System.out.println(passLength);
+
+		// This is the part where the passwords are created
+		System.out.println("The passwords you have created are as follows:\n");
+
+		// Remember: necessary to initialize generator here since the
+		// length/amount of passwords is unknown until this point
+		PassGenerator pass = new PassGenerator(howManyPass, passLength);
+		pass.generate();
+		pass.printPass();
 
 		kb.close();
 	}
