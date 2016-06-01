@@ -31,8 +31,8 @@ public class PassGenerator {
 	 * This variable will be the representation of alphabet characters used to
 	 * make up each password
 	 */
-	private final char[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
-			'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+	private final String[] alphabet = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
+			"q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
 
 	/*
 	 * This variable will hold the final set of passwords to be printed after
@@ -75,6 +75,7 @@ public class PassGenerator {
 	 * append a new character to each position until it reaches the length
 	 * specified for each password that the user desires.
 	 */
+	@SuppressWarnings("unused")
 	public void generate() {
 		// Keep track of the number of passwords created if you're using an
 		// array of strings to hold each password
@@ -87,10 +88,21 @@ public class PassGenerator {
 		int numOfPass = howManyPass;
 
 		for (int i = 0; i < numOfPass; i++) {
+			passwords[i] = new String();
 			for (int j = 0; j < length; j++) {
-
+				passwords[i] = passwords[i].concat(alphabet[rand.nextInt(26)]);
 			}
 		}
+	}
 
+	/*
+	 * This method will print out the passwords that have been generated. It
+	 * ideally should print each on a separate line for the user to clearly
+	 * dilineate what they have received.
+	 */
+	public void printPass() {
+		for (int i = 0; i < howManyPass; i++) {
+			System.out.println(passwords[i]);
+		}
 	}
 }
