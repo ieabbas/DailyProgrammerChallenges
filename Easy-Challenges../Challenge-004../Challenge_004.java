@@ -8,9 +8,9 @@ import java.util.*;
  * https://github.com/FreddieV4/DailyProgrammerChallenges.
  * 
  * Challenge 004 : Your challenge for today is to create a random password
- * generator!For extra credit, allow the user to specify the amount of passwords
- * to generate. For even more extra credit, allow the user to specify the length
- * of the strings he wants to generate!
+ * generator! For extra credit, allow the user to specify the amount of
+ * passwords to generate. For even more extra credit, allow the user to specify
+ * the length of the strings he wants to generate!
  * 
  * Solution provided by : Ismail A.
  */
@@ -40,10 +40,6 @@ public class Challenge_004 {
 			System.out.println("How many characters should be in each password?\n(Valid input are integers above 0)");
 			passLength = kb.nextInt();
 		} while (passLength < 0);
-
-		// Testing the value associations
-		// System.out.println(howManyPass);
-		// System.out.println(passLength);
 
 		// This is the part where the passwords are created
 		System.out.println("The passwords you have created are as follows:\n");
