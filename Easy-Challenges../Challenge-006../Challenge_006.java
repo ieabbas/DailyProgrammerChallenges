@@ -16,8 +16,15 @@ public class Challenge_006 {
 
 	public static void main(String[] args) {
 		System.out.println("Here is Pi, calculated to at least 30 decimal places:\n");
-		// Currently this only prints out Pi to a couple of truncated values
-		System.out.format("%f", Math.PI);
-	}
+		char pi = '3';
 
+		for (int i = 3; i < 30; i++) {
+			int n1 = i + 1;
+			pi = (char) (pi + ((char)n1));
+		}
+		System.out.println(pi);
+
+		System.out.println(Math.PI);
+
+	}
 }
