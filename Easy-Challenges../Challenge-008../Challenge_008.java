@@ -16,6 +16,13 @@ package challenge_008;
 public class Challenge_008 {
 
 	public static void main(String[] args) {
+		String lyric1 = " bottles of beer on the wall,";
+		String lyric2 = " bottles of beer,";
+		String lyric3 = " take one down, pass it around,";
+		String lyric4 = " bottles of beer on the wall!";
+		
+		
+		
 		for (int i = 0; i < 99; i++) {
 			int count = 99;
 			System.out.println(count - i);
