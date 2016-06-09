@@ -23,7 +23,6 @@ public class Challenge_006 {
 			pi = (char) (pi + ((char)n1));
 		}
 		System.out.println(pi);
-
 		System.out.println(Math.PI);
 
 	}
