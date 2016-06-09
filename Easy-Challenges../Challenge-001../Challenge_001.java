@@ -1,7 +1,6 @@
 package challenge_001;
 
 import java.util.*;
-
 /**
  * This package conatins the challenges posted from the
  * DailyProgrammerChallenges GitHub repository that can be found at
