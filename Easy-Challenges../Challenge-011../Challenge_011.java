@@ -21,6 +21,7 @@ public class Challenge_011 {
 	// Assume that the input is either a String or an int, not both
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
+		
 		Scanner kb = new Scanner(System.in);
 		int day;
 		int month;
