@@ -1,7 +1,6 @@
 package challenge_009;
 
 import java.io.*;
-
 /**
  * This repository contains the challenges posted from the
  * DailyProgrammerChallenges GitHub repository that can be found at
