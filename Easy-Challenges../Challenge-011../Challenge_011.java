@@ -1,6 +1,7 @@
 package challenge_011;
 
 import java.util.*;
+import java.time.Year;
 
 /**
  * This repository contains the challenges posted from the
@@ -17,14 +18,26 @@ import java.util.*;
  */
 public class Challenge_011 {
 
-  //Assume that the input is either a String or an int, not both
+	// Assume that the input is either a String or an int, not both
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		Scanner kb = new Scanner(System.in);
-		String day;
-		String month;
+		int day;
+		int month;
 		int year;
-		
-		System.out.println();
+
+		System.out.println(
+				"Welcome to \"Guess that day! The game where YOU give me a year, \nmonth, and date, and I tell YOU what day of the week it is! Ready?\n");
+		System.out.println("What year are you looking for?");
+		year = kb.nextInt();
+
+		System.out.println("What month are you looking for?");
+		month = kb.nextInt();
+
+		System.out.println("What day are you looking for?");
+		day = kb.nextInt();
+
+		System.out.println("It was a " + Year.of(year).atMonth(month).atDay(day).getDayOfWeek() + "!");
 	}
 
 }
