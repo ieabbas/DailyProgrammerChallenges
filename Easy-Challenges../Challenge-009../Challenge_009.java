@@ -39,7 +39,7 @@ public class Challenge_009 {
 		}
 
 		// Sorting the values
-		outputArray = radixSort(intArray, 1);
+		outputArray = bubbleSort(intArray);
 
 		// Printing the sorted values
 		System.out.print("\nYour sorted values are\n");
@@ -54,39 +54,28 @@ public class Challenge_009 {
 	 * academic assignments on sorting algorithms. All rights are reserved to
 	 * Professor Edwin Rodriguez of Cal Poly Pomona.
 	 */
-	public static int[] radixSort(int[] numbers, int radix) {
-		int[] result = numbers;
+	public static int[] bubbleSort(int[] numbers) {
+		boolean swapped = false;
 
-		for (int pos = 1; pos <= radix; ++pos) {
-			result = modCountingSort(result, pos);
-		}
+		do {
+			swapped = false;
 
-		return result;
+			for (int i = 0; i < (numbers.length - 1); ++i) {
+				if (numbers[i] > numbers[i + 1]) {
+					swap(numbers, i, i + 1);
+					swapped = true;
+				}
+			}
+
+		} while (swapped);
+
+		return numbers;
 	}
 
-	public static int[] modCountingSort(int[] numbers, int pos) {
-		int[] counter = new int[10];
-		int[] result = new int[numbers.length];
-
-		for (int i = 0; i < numbers.length; ++i) {
-			++counter[getDigit(numbers[i], pos)];
-		}
-
-		for (int i = 1; i < counter.length; ++i) {
-			counter[i] += counter[i - 1];
-		}
-
-		for (int i = result.length - 1; i >= 0; --i) {
-			result[--counter[getDigit(numbers[i], pos)]] = numbers[i];
-		}
-
-		return result;
-	}
-
-	private static int getDigit(int number, int pos) {
-		int pow = (int) Math.pow(10, pos);
-		int rem = number % pow;
-		return rem / (pow / 10);
+	private static void swap(int[] numbers, int i, int j) {
+		int temp = numbers[i];
+		numbers[i] = numbers[j];
+		numbers[j] = temp;
 	}
 
 }
