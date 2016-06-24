@@ -1,5 +1,7 @@
 package challenge_014;
 
+import java.io.*;
+
 /**
  * This repository contains the challenges posted from the
  * DailyProgrammerChallenges GitHub repository that can be found at
@@ -20,9 +22,22 @@ package challenge_014;
  */
 public class Challenge_014 {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		String[] input;
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		System.out.print("Enter a list of elements, each element separated by a space:");
 
+	}
+
+	/*
+	 * This method will swap values using the standard temp variable switch
+	 */
+	public static void swap(int i, int j) {
+		char temp;
+		temp = (char) i;
+		i = j;
+		j = temp;
 	}
 
 }
