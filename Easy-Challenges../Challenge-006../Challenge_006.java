@@ -16,15 +16,12 @@ public class Challenge_006 {
 
 	public static void main(String[] args) {
 		System.out.println("Here is Pi, calculated to at least 30 decimal places:\n");
-		int pi = 3;
-
-		for (int i = 3; i < 30; i++) {
-			int n1 = i + 1;
-			pi = (pi + ((char) n1));
+		double series = 0.0;
+		for (double i = 1; i < 100000000; i += 2) {
+			series = series + ((1.0 / (2.0 * i - 1)) - (1.0 / (2.0 * i + 1)));
 		}
+		double pi = 4 * series;
 		System.out.println(pi);
-		System.out.println(Math.PI);
-		System.out.println(120 * (Math.sin(Math.toRadians(180 / 120))));
 
 	}
 }
