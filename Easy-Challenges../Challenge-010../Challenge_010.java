@@ -76,6 +76,7 @@ public class Challenge_010 {
 	public static boolean validSymbolNum(String input) {
 		int[] symbolNum = { 0, 0 };
 		char[] symbols = { '-', '.' };
+		int invalidSymbolNum = 0;
 
 		// Check each character of the input against each position of the
 		// symbols array
@@ -83,6 +84,12 @@ public class Challenge_010 {
 			for (int j = 0; j < symbols.length; j++) {
 				if (input.charAt(i) == symbols[j]) {
 					symbolNum[j]++;
+				}
+				// Make sure that if there are non hyphen or period symbols, it
+				// is indicated (using ASCII values)
+				else if ((input.charAt(i) < 48 || input.charAt(i) > 57) && input.charAt(i) != 46
+						&& input.charAt(i) != 45 && input.charAt(i) != 40 && input.charAt(i) != 41) {
+					invalidSymbolNum++;
 				}
 			}
 		}
@@ -103,8 +110,8 @@ public class Challenge_010 {
 		}
 		// If there are invalid symbols, anything other than a hyphen or period,
 		// the number is invalid
-		else if () {
-
+		else if (invalidSymbolNum > 0) {
+			return false;
 		} else {
 			return true;
 		}
@@ -139,6 +146,7 @@ public class Challenge_010 {
 			}
 		}
 
+		// It will return an E if neither symbol was used inside of the input
 		if (symbolNum[0] >= 1) {
 			return '-';
 		} else if (symbolNum[1] >= 1) {
