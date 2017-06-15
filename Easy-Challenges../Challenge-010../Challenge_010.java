@@ -22,6 +22,8 @@ import java.util.*;
  * 
  * source: programmingpraxis.com
  * 
+ * CURRENTLY : 123-45-6789 IS ACCEPTED AS A VALID NUMBER INCORRECTLY
+ * 
  * Solution provided by : Ismail A.
  * 
  * @author ieabbas
@@ -38,8 +40,7 @@ public class Challenge_010 {
 			input = kb.nextLine();
 
 			// Check for the invalid conditions first, then everything else
-			// should
-			// be valid right?
+			// should be valid right?
 			if (validLength(input) == false || validSymbolNum(input) == false || validIntNum(input) == false) {
 				System.out.println("This is not a valid number");
 			} else {
